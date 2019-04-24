@@ -13,8 +13,8 @@
   </div>
 </div>
 
-<form class="container my-4">
-  <form action="events" method="get" onsubmit="return isValid()">
+<div class="container my-4">
+  <form action="events.php" method="get" onsubmit="return isValid()">
     <div class="row">
       <div class="col-lg-3 col-md-3">
         <div class="form-group">
@@ -51,7 +51,7 @@
       </div>
     </div>
   </form>
-</form>
+</div>
 
 <script>
   let category = document.getElementById('category');
