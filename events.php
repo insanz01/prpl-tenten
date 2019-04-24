@@ -45,7 +45,7 @@ if (isset($_GET['location'])) {
           <div class="card-body">
             <h5 class="card-title"><?= $data['title']; ?></h5>
             <p class="card-text"><?= $data['description']; ?></p>
-            <a href="detail_event.php/id=<?php $data['id']; ?>" class="btn btn-success">Go Detail</a>
+            <a href="detail_event.php?id=<?= $data['id']; ?>" class="btn btn-success">Go Detail</a>
           </div>
         </div>
       </div>

@@ -76,7 +76,7 @@
           <div class="card-body">
             <h5 class="card-title">Event Title</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="detail_event.php" class="btn btn-success">Go Detail</a>
+            <a href="detail_event.php?id=<?= $i; ?>" class="btn btn-success">Go Detail</a>
           </div>
         </div>
       </div>
