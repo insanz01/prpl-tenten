@@ -14,9 +14,9 @@
 </div>
 
 <form class="container my-4">
-  <form action="#!" method="post" onsubmit="return isValid()">
+  <form action="events" method="get" onsubmit="return isValid()">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3">
         <div class="form-group">
           <label for="category" class="text-muted">Event Category</label>
           <select class="form-control" name="category" id="category">
@@ -27,7 +27,7 @@
           </select>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3">
         <div class="form-group">
           <label for="location" class="text-muted">Location</label>
           <select name="location" id="location" class="form-control">
@@ -40,13 +40,13 @@
           </select>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3">
         <div class="form-group">
           <label for="date" class="text-muted">Date</label>
           <input type="date" name="date" id="date" class="form-control">
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3">
         <button type="submit" class="btn btn-primary btn-block float-right" style="margin-top: 32px">Search Filter</button>
       </div>
     </div>
@@ -59,12 +59,10 @@
   let date_value = document.getElementById('date');
 
   var isValid = function() {
-    if (category.value == '' || locate.value == '' || date_value.value == '') {
+    if (category.value === '' || locate.value === '') {
       Swal.fire('Oops!', 'Any content filter is empty!', 'warning');
-
       return false;
     }
-
     return true;
   }
 </script>
@@ -72,7 +70,7 @@
 <div class="container-fluid">
   <div class="row">
     <?php for ($i = 0; $i < 4; $i++) { ?>
-      <div class="col-lg-3 my-2 mx-auto">
+      <div class="col-lg-3 col-md-3 my-2 mx-auto">
         <div class="card" style="width: 18rem;">
           <img src="https://images.unsplash.com/photo-1553161110-da7abad2dbf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img-top" alt="this is image of event">
           <div class="card-body">
