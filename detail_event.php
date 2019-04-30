@@ -72,10 +72,10 @@ if (isset($_GET['id'])) {
         <p><b>Date : </b><?= $res->date_e; ?></p>
       </p>
       <p class="text-muted">
-        <p><b>Time : </b>09.00 – Selesai
+        <p><b>Time : </b><?= $res->jam; ?> – Selesai
           LEARN Coworking Space
           Ruko Pasar Modern Blok R46
-          Kota Harapan Indah – Jabodetabek</p>
+          Kota Harapan Indah – <?= $res->lokasi; ?></p>
       </p>
     </div>
   </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2019 at 06:14 PM
+-- Generation Time: Apr 30, 2019 at 05:15 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -35,16 +35,22 @@ CREATE TABLE `events` (
   `image_url` varchar(50) DEFAULT NULL,
   `date_e` date DEFAULT NULL,
   `lokasi` varchar(25) DEFAULT NULL,
-  `kategori` varchar(25) DEFAULT NULL
+  `kategori` varchar(25) DEFAULT NULL,
+  `jam` time NOT NULL,
+  `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `title`, `description`, `image_url`, `date_e`, `lokasi`, `kategori`) VALUES
-(1, 'SKANDAL TENTEN DAN HEDI', 'Bagaimanakah kisah selanjutnya antara hedi dengan tenten, saksikan seminarnya', 'gambar/seminar5.png', '2019-04-24', 'jakarta', 'education'),
-(2, 'AVENGERS END GAME', 'Bagaimanakah nasib tanos pada serian avengers yang katanya terakhir ini, durasinya panjang loh 3 jam', 'gambar/seminar6.png', '2019-04-24', 'bekasi', 'technology');
+INSERT INTO `events` (`id`, `title`, `description`, `image_url`, `date_e`, `lokasi`, `kategori`, `jam`, `harga`) VALUES
+(1, 'SKANDAL TENTEN DAN HEDI', 'Bagaimanakah kisah selanjutnya antara hedi dengan tenten, saksikan seminarnya', 'gambar/seminar5.png', '2019-04-24', 'jakarta', 'education', '22:10:49', 0),
+(2, 'AVENGERS END GAME', 'Bagaimanakah nasib tanos pada serian avengers yang katanya terakhir ini, durasinya panjang loh 3 jam', 'gambar/seminar6.png', '2019-04-24', 'bekasi', 'technology', '22:10:49', 100000),
+(3, 'RAMADHAN TELAH TIBA', 'Sebentar lagi bulan ramadhan akan datang, mari kita sambut bulan ramadhan ini', 'gambar/seminar7.png', '2019-04-25', 'depok', 'education', '22:10:49', 100000),
+(4, 'BUKA PUASA BERSAMA', 'Ayo kita berbuka puasa bersama dengan sahabat dan keluarga, jangan lupa batalkan puasanya ketika mendengan adzan magrib', 'gambar/seminar8.png', '2019-04-25', 'jakarta', 'education', '22:10:49', 100000),
+(5, 'LEBARAN SEBENTAR LAGI', 'Baju baru alhamdulillah, tuk dipakai dihari raya, tak punyapun tak apa-apa.. masih ada baju yang lama', 'gambar/seminar9.png', '2019-04-25', 'jakarta', 'education', '22:10:49', 100000),
+(6, 'LEBARAN KAPAN ?', 'Lebaran akan jatuh pada tanggal 1 syawal, maka tidak boleh ada yang berpuasa pada tanggal tersebut.. hehe', 'gambar/seminar10.png', '2019-04-25', 'jakarta', 'education', '22:10:49', 100000);
 
 -- --------------------------------------------------------
 
@@ -93,7 +99,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
