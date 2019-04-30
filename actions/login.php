@@ -1,6 +1,6 @@
 <?php
 include "../database/db.php";
-if (isset($_POST['login'])) {
+if (isset($_POST['email'])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
 
@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
 
   if ($res->id) {
     echo 'berhasil login lah yaaa...';
-    header("Refresh:5; url=../index.php", true, 303);
+    header("Refresh:5; url=../vendor/sbadmin/index.html", true, 303);
   } else {
     echo "masih gagal nich<br>";
     header("Refresh:5; url=../index.php", true, 303);

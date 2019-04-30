@@ -31,13 +31,13 @@ if (isset($_GET['id'])) {
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-5 col-md-6 py-3 card">
+    <div class="col-lg-5 col-md-5 py-3 card">
       <p class="text-muted">
         <?= $res->description; ?>
       </p>
     </div>
     <div class="mx-auto"></div>
-    <div class="col-lg-5 col-md-6 py-3 card">
+    <div class="col-lg-5 col-md-5 py-3 card">
       <p class="text-muted">Date : <?= $res->date_e; ?></p>
       <p class="text-muted">Time : Belum punya data untuk waktu. hehe</p>
     </div>

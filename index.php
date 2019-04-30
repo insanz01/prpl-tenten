@@ -67,20 +67,26 @@
   }
 </script>
 
+<?php
+include 'database/db.php';
+$q = "select * from events";
+$sql = mysqli_query($c, $q);
+?>
+
 <div class="container-fluid">
   <div class="row">
-    <?php for ($i = 0; $i < 4; $i++) { ?>
-      <div class="col-lg-3 col-md-3 my-2 mx-auto">
+    <?php foreach ($sql as $data) : ?>
+      <div class="col-lg-3 col-md-3 my-2">
         <div class="card" style="width: 18rem;">
-          <img src="https://images.unsplash.com/photo-1553161110-da7abad2dbf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img-top" alt="this is image of event">
+          <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image of event">
           <div class="card-body">
-            <h5 class="card-title">Event Title</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="detail_event.php?id=<?= $i; ?>" class="btn btn-success">Go Detail</a>
+            <h5 class="card-title"><?= $data['title']; ?></h5>
+            <p class="card-text"><?= $data['description']; ?></p>
+            <a href="detail_event.php?id=<?= $data['id']; ?>" class="btn btn-success">Go Detail</a>
           </div>
         </div>
       </div>
-    <?php } ?>
+    <?php endforeach ?>
   </div>
 </div>
 <div class="container mt-4">

@@ -1,9 +1,30 @@
 <?php include_once('templates/header.php'); ?>
-
-<div class="container">
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content">
+      <div class="col-12 user-img">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="disini gambarnya">
+      </div>
+      <form action="actions/login.php" method="post" class="col-12">
+        <div class="form-group fg">
+          <input type="text" name="email" class="form-control" placeholder="Masukan email">
+        </div>
+        <div class="form-group fg">
+          <input type="password" name="password" class="form-control" placeholder="Masukan kata sandi">
+        </div>
+        <button type="submit" class="btn tombol">
+          <i class="fas fa-sign-in-alt"></i>&nbsp;Masuk
+        </button>
+      </form>
+      <div class="col-12 forgot">
+        <a href="#">Lupa Kata sandi ?</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
   <div class="row py-5">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 mx-auto">
       <form action="actions/login.php" method="post" onsubmit="return isValid()">
         <div class="form-group">
           <label for="email" class="text-muted">Email Address</label>
@@ -18,9 +39,8 @@
         </div>
       </form>
     </div>
-    <div class="col-lg-4"></div>
   </div>
-</div>
+</div> -->
 
 <script>
   let email = document.getElementById('email');
