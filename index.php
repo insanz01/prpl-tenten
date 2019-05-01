@@ -67,6 +67,8 @@
   }
 </script>
 
+<!-- copy dari sini -->
+
 <?php
 include 'database/db.php';
 $q = "select * from events";
@@ -101,6 +103,9 @@ $sql = mysqli_query($c, $q);
     <?php endforeach ?>
   </div>
 </div>
+
+<!-- copy sampai sini -->
+
 <div class="container mt-4">
   <p class="text-center">
     <a href="#!">See More</a>
