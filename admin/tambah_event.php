@@ -18,7 +18,7 @@
           <h6 class="m-0 font-weight-bold text-primary">Tambah Event Baru</h6>
         </div>
         <div class="card-body">
-          <form class="user">
+          <form class="user" action="actions/tambah.php" method="post">
             <div class="form-group">
               <label for="title">Judul</label>
               <input type="text" class="form-control form-control-user" name="title" id="title">
@@ -44,6 +44,32 @@
                 <div class="form-group">
                   <label for="waktu_akhir">Jam Berakhir</label>
                   <input type="time" name="waktu_akhir" class="form-control" id="waktu_akhir">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <label for="lokasi">Lokasi</label>
+                  <select name="location" id="lokasi" class="form-control form-control-user">
+                    <option value="jabodetabek">Jabodetabek</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bogor">Bogor</option>
+                    <option value="depok">Depok</option>
+                    <option value="tangerang">Tangerang</option>
+                    <option value="bekasi">Bekasi</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <label for="kategori">Kategori</label>
+                  <select name="kategori" id="kategori" class="form-control form-control-user">
+                    <option value="all">Pilih Semua</option>
+                    <option value="education">Edukasi</option>
+                    <option value="technology">Teknologi</option>
+                    <option value="health">Kesehatan dan Kecantikan</option>
+                  </select>
                 </div>
               </div>
             </div>
