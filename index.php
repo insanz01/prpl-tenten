@@ -78,11 +78,21 @@ $sql = mysqli_query($c, $q);
     <?php foreach ($sql as $data) : ?>
       <div class="col-lg-3 col-md-3 my-2">
         <div class="card" style="width: 18rem;">
-          <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image of event">
+          <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image">
           <div class="card-body">
-            <h5 class="card-title"><?= $data['title']; ?></h5>
-            <p class="card-text"><?= $data['description']; ?></p>
-            <a href="detail_event.php?id=<?= $data['id']; ?>" class="btn btn-success">Go Detail</a>
+            <div class="card-text">
+              <h6><?= $data['title']; ?></h6>
+              <p class="text-muted" style="font-size: .9em;">
+                <?= $data['date_e'] . ', ' . $data['jam']; ?>
+                <br>
+                <?= $data['lokasi']; ?>
+                <br>
+                <?php
+                if ($data['harga'] == 0) echo 'Gratis';
+                else echo 'Rp ' . $data['harga'] . ',-';
+                ?>
+              </p>
+            </div>
           </div>
         </div>
       </div>
