@@ -12,7 +12,7 @@ if (isset($_POST['email'])) {
 
   if ($res->id) {
     echo 'berhasil login lah yaaa...';
-    header("Refresh:5; url=../vendor/sbadmin/index.html", true, 303);
+    header("Refresh:5; url=../admin/index.php", true, 303);
   } else {
     echo "masih gagal nich<br>";
     header("Refresh:5; url=../index.php", true, 303);
