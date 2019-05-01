@@ -5,7 +5,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <h1 class="h3 mb-0 text-gray-800">Tambah Event</h1>
     <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
   </div>
   <!-- Content Row -->
@@ -15,7 +15,7 @@
     <div class="col-xl-9 col-lg-8 mx-auto">
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Tambah Event Baru</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Form Event Baru</h6>
         </div>
         <div class="card-body">
           <form class="user" action="actions/tambah.php" method="post">
