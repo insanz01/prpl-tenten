@@ -16,8 +16,18 @@ if (isset($_GET['id'])) {
       <img class="d-block w-100" src="<?= $res->image_url; ?>" alt="">
     </div>
   </div>
+  <div class="row container py-4">
+    <div class="col-6">
+      <h4 class="float-left font-weight-light">Harga: Rp. <?= $res->harga; ?> ,-</h4>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-outline-success float-right">
+        Daftar Sekarang
+      </button>
+    </div>
+  </div>
   <div class="row container card shadow-lg rounded py-2">
-    <div class="col-lg-8 col-md-8 py-3">
+    <div class="col-xl-8 col-lg-8 col-md-8 py-3">
       <h1 class="display-5">
         <?= $res->title; ?>
       </h1>
