@@ -77,24 +77,26 @@ $sql = mysqli_query($c, $q);
   <div class="row">
     <?php foreach ($sql as $data) : ?>
       <div class="col-lg-3 col-md-3 my-2">
-        <div class="card" style="width: 18rem;">
-          <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image">
-          <div class="card-body">
-            <div class="card-text">
-              <h6><?= $data['title']; ?></h6>
-              <p class="text-muted" style="font-size: .9em;">
-                <?= $data['date_e'] . ', ' . $data['jam']; ?>
-                <br>
-                <?= $data['lokasi']; ?>
-                <br>
-                <?php
-                if ($data['harga'] == 0) echo 'Gratis';
-                else echo 'Rp ' . $data['harga'] . ',-';
-                ?>
-              </p>
+        <a style="color: black; text-decoration: none;" href="event_detail.php?id=<?= $data['id']; ?>">
+          <div class="card" style="width: 18rem;">
+            <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image">
+            <div class="card-body">
+              <div class="card-text">
+                <h6><?= $data['title']; ?></h6>
+                <p class="text-muted" style="font-size: .9em;">
+                  <?= $data['date_e'] . ', ' . $data['jam']; ?>
+                  <br>
+                  <?= $data['lokasi']; ?>
+                  <br>
+                  <?php
+                  if ($data['harga'] == 0) echo 'Gratis';
+                  else echo 'Rp ' . $data['harga'] . ',-';
+                  ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     <?php endforeach ?>
   </div>
