@@ -77,7 +77,7 @@ $sql = mysqli_query($c, $q);
   <div class="row">
     <?php foreach ($sql as $data) : ?>
       <div class="col-lg-3 col-md-3 my-2">
-        <a style="color: black; text-decoration: none;" href="event_detail.php?id=<?= $data['id']; ?>">
+        <a style="color: black; text-decoration: none;" href="detail_event.php?id=<?= $data['id']; ?>">
           <div class="card" style="width: 18rem;">
             <img src="<?= $data['image_url'] ?>" class="card-img-top" alt="this is image">
             <div class="card-body">
