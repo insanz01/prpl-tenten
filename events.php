@@ -81,11 +81,11 @@ if (isset($_POST['cari'])) {
       <?php foreach ($result as $data) : ?>
         <div class="col-lg-3 my-2 mx-auto">
           <div class="card" style="width: 18rem;">
-            <img src="<?= $data->image_url; ?>" class="card-img-top" alt="this is image of event">
+            <img src="<?= $data['image_url']; ?>" class="card-img-top" alt="this is image of event">
             <div class="card-body">
-              <h5 class="card-title"><?= $data->title; ?></h5>
-              <p class="card-text"><?= $data->description; ?></p>
-              <a href="detail_event.php?id=<?= $data->id; ?>" class="btn btn-success">Go Detail</a>
+              <h5 class="card-title"><?= $data['title']; ?></h5>
+              <p class="card-text"><?= $data['description']; ?></p>
+              <a href="detail_event.php?id=<?= $data['id']; ?>" class="btn btn-success">Go Detail</a>
             </div>
           </div>
         </div>
