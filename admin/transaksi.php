@@ -16,7 +16,7 @@ $sql = mysqli_query($c, $q);
 
   <div class="row">
     <!-- Form tambah event -->
-    <div class="col-xl-9 col-lg-8 mx-auto">
+    <div class="col-xl-11 col-lg-10 mx-auto">
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Form Event Baru</h6>
