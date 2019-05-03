@@ -44,7 +44,7 @@ $sql = mysqli_query($c, $q);
                   <td><?= $data['email']; ?></td>
                   <td><?= $data['judul']; ?></td>
                   <td><?= $data['jumlah']; ?></td>
-                  <td><?= $data['total']; ?></td>
+                  <td><?= $data['total_harga']; ?></td>
                 </tr>
                 <?php $i++; ?>
               <?php endforeach; ?>

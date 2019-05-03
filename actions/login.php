@@ -12,7 +12,7 @@ if (isset($_POST['email'])) {
 
   if ($res->id) {
     echo 'berhasil login, tunggu 5 detik!';
-    if ($email == "ftenten302@gmail.com") {
+    if ($email == "ftenten302@gmail.com" || $email == "insankamil@gmail.co") {
       header("Refresh:5; url=../admin/index.php", true, 303);
     } else {
       $GLOBALS['login'] = true;

@@ -56,6 +56,12 @@ include "../database/db.php";
           <span>Tambah Event</span></a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" href="transaksi.php">
+          <i class="fas fa-fw fa-cat"></i>
+          <span>Transaksi</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
